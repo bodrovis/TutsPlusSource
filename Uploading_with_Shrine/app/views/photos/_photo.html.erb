@@ -1,0 +1,11 @@
+<div>
+  <% if photo.image %>
+    <%= image_tag photo.image_url(:thumb) %>
+    <p>
+      Size <%= photo.image[:original].size %> bytes<br>
+      MIME type <%= photo.image[:original].mime_type %><br>
+      Dimensions <%= "#{photo.image[:original].width}x#{photo.image[:original].height}" %>
+    </p>
+  <% end %>
+  <p><%= photo.title %> | <%= link_to 'Edit', edit_photo_path(photo) %></p>
+</div>
