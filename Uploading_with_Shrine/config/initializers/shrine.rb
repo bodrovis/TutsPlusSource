@@ -1,7 +1,6 @@
 require "shrine"
 require "shrine/storage/file_system"
 require "shrine/storage/s3"
-require "image_processing/mini_magick"
 
 Shrine.plugin :activerecord
 Shrine.plugin :validation_helpers

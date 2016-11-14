@@ -1,5 +1,5 @@
 <div>
-  <% if photo.image %>
+  <% if photo.image_data? %>
     <%= image_tag photo.image_url(:thumb) %>
     <p>
       Size <%= photo.image[:original].size %> bytes<br>
