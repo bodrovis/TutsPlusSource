@@ -9,7 +9,7 @@ class PhotosController < ApplicationController
 
   def create
     @photo = Photo.new(photo_params)
-    if @photo.save
+    if verify_recaptcha(model: @photo) && @photo.save
       flash[:success] = 'Photo added!'
       redirect_to photos_path
     else
@@ -23,7 +23,7 @@ class PhotosController < ApplicationController
 
   def update
     @photo = Photo.find(params[:id])
-    if @photo.update_attributes(photo_params)
+    if verify_recaptcha(model: @photo) && @photo.update_attributes(photo_params)
       flash[:success] = 'Photo edited!'
       redirect_to photos_path
     else
