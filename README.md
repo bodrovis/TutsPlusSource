@@ -32,4 +32,4 @@ please don't hesitate to contact me :).
 
 ## Legals
 
-(c) Ilya Bodrov ([ilyabodrov.me](http://ilyabodrov.me))
+(c) Ilya Bodrov ([bodrovis.tech](http://bodrovis.tech))
