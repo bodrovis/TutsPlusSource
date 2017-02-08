@@ -13,7 +13,7 @@ class AlbumsController < ApplicationController
 
   def create
     @album = Album.new(album_params)
-    if @album.save
+    if verify_recaptcha(model: @album) && @album.save
       flash[:success] = 'Album added!'
       redirect_to albums_path
     else
@@ -27,7 +27,7 @@ class AlbumsController < ApplicationController
 
   def update
     @album = Album.find(params[:id])
-    if @album.update_attributes(album_params)
+    if verify_recaptcha(model: @album) && @album.update_attributes(album_params)
       flash[:success] = 'Album updated!'
       redirect_to albums_path
     else

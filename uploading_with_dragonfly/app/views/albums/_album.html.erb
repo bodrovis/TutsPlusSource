@@ -1,6 +1,6 @@
 <li>
-  <%# image_tag(album.image.thumb('250x250#').url, alt: album.title) if album.image_stored? %>
-  <%= image_tag(album.image_thumb.url, alt: album.title) if album.image_thumb_stored? %>
+  <%= image_tag(album.image.thumb('250x250#').url, alt: album.title) if album.image_stored? %>
+  <%# image_tag(album.image_thumb.url, alt: album.title) if album.image_thumb_stored? %>
   <%= link_to album.title, album_path(album) %> by
   <%= album.singer %>
   | <%= link_to 'Edit', edit_album_path(album) %>

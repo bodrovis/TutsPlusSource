@@ -1,0 +1,2 @@
+class Thumb < ApplicationRecord
+end

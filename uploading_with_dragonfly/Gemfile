@@ -23,15 +23,18 @@ gem 'turbolinks', '~> 5'
 
 gem 'dragonfly'
 gem 'streamio-ffmpeg'
+gem "recaptcha", require: "recaptcha/rails"
 
 group :development do
   gem 'sqlite3'
   gem 'pry-rails'
+  gem 'dotenv-rails'
 end
 
 group :production do
   gem 'pg'
   gem 'rack-cache', :require => 'rack/cache'
+  gem 'dragonfly-s3_data_store'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
