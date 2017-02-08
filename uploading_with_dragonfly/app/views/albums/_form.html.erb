@@ -1,0 +1,27 @@
+<%= form_for @album do |f| %>
+  <%= render 'shared/errors', object: @album %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :singer %>
+    <%= f.text_field :singer %>
+  </div>
+
+  <div>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+  <%= f.hidden_field :retained_image %>
+
+  <% if @album.image_thumb_stored? %>
+    <%= image_tag(@album.image_thumb.url, alt: @album.title)  %>
+    <%= f.label :remove_image %>
+    <%= f.check_box :remove_image %>
+  <% end %>
+
+  <%= f.submit %>
+<% end %>

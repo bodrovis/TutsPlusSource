@@ -1,0 +1,4 @@
+<li>
+  <%= audio_tag song.track.url, controls: true %>
+  <%= song.title %> (<%= song.track.meta['duration'] %>, <%= song.track.meta['bitrate'] %>Kb/s)
+</li>

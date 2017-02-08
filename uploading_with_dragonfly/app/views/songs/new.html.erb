@@ -1,0 +1,15 @@
+<h1>Add song to <%= @album.title %></h1>
+
+<%= form_for [@album, @song] do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :track %>
+    <%= f.file_field :track %>
+  </div>
+
+  <%= f.submit %>
+<% end %>

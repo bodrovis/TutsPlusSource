@@ -1,0 +1,8 @@
+<h1><%= @album.title %></h1>
+<h2>by <%= @album.singer %></h2>
+
+<%= link_to 'Add song', new_album_song_path(@album) %>
+
+<ol>
+  <%= render @album.songs %>
+</ol>
