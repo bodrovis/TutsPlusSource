@@ -1,0 +1,5 @@
+<h1><%= @book.title %> by <%= @book.author %></h1>
+
+<%= link_to(image_tag(@book.image.url(:thumb)), download_book_path(@book), target: '_blank') if @book.image.exists? %>
+
+<p><%= @book.description %></p>

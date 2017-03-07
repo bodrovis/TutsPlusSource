@@ -1,0 +1,4 @@
+<li>
+  <%= image_tag(book.image.url(:thumb), alt: book.title) if book.image.exists? %>
+  <strong><%= link_to book.title, book_path(book) %></strong> by <%= book.author %>
+</li>

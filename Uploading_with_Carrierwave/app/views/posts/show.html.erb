@@ -1,0 +1,16 @@
+<%= link_to 'All posts', posts_path %>
+<h1><%= @post.title %></h1>
+
+<%= link_to(image_tag(@post.image.thumb.url, alt: 'Image'), @post.image.url, target: '_blank') if @post.image? %>
+
+<p><%= @post.body %></p>
+
+<% if @post.attachments? %>
+  <ul>
+    <% @post.attachments.each do |attachment| %>
+      <li><%= link_to(image_tag(attachment.thumb.url, alt: 'Image'), attachment.url, target: '_blank') %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<p><%= link_to 'Edit', edit_post_path(@post) %></p>
