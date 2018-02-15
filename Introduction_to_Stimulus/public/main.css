@@ -1,0 +1,9 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+}
+
+.chosen {
+  font-weight: bold;
+  text-decoration: none;
+  cursor: default;
+}
