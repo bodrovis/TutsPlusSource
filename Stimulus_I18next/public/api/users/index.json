@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1",
+    "login": "johndoe",
+    "photos_count": "1",
+    "gender": "male"
+  },
+  {
+    "id": "2",
+    "login": "annsmith",
+    "photos_count": "20",
+    "gender": "female"
+  }
+]

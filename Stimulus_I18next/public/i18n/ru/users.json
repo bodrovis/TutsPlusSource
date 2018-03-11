@@ -1,0 +1,8 @@
+{
+  "login": "Логин",
+  "uploaded_male": "Загрузил уже",
+  "uploaded_female": "Загрузила уже",
+  "photos_0": "одну фотографию",
+  "photos_1": "{{count}} фотографии",
+  "photos_2": "{{count}} фотографий"
+}

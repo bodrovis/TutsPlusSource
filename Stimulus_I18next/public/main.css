@@ -1,0 +1,11 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+}
+
+.language-switcher li {
+  cursor: pointer;
+}
+.language-switcher .current {
+  font-weight: bold;
+  cursor: default;
+}
